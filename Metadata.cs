@@ -39,6 +39,7 @@ namespace MetadataPlugIn
                         return false;
                 }
 
+                ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
                 var wc = new WebClient();
                 wc.Headers.Add("User-Agent", UserAgent);
                 wc.Headers.Add("Authorization",
